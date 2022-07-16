@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+}
+
+.word-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 100px;
+    margin: 40px 0;
+}
+
+.date {
+    font-size: 28px;
+    padding: 20px 100px;
+}
+
+.french-word,
+.english-word,
+.word-type {
+    font-family: 'Ibarra Real Nova', 'Times New Roman', Times, serif;
+}
+
+.french-word,
+.english-word {
+    font-size: 120px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.word-type {
+    font-size: 48px;
+    margin: 0;
+    font-weight: 400;
+    padding: 20px 0;
+}
+
+.english-word {
+    align-self: flex-end;
+    color: #2267B8;
+}
+
+.sentences-container {
+    background-color: #2267B8;
+    padding: 30px 100px;
+    margin: 20px 0;
+}
+
+.french-sentence,
+.english-sentence {
+    color: white;
+    font-size: 24px;
+    padding: 10px 0;
+}
+
+.french-sentence,
+.english-sentence,
+.date,
+#footer {
+    font-family: 'Lato', 'Arial', sans-serif;
+}
+
+.french-sentence {
+    font-weight: 700;
+}
+
+.english-sentence {
+    font-weight: 400;
+}
+
+.day-container {
+    margin: 0 0 100px 0;
+}
+
+#footer {
+    text-align: center;
+    margin: 0 0 40px 0;
+}
+
+#footer-name {
+    font-weight: 700;
+}
