@@ -11,7 +11,7 @@ body {
 }
 
 .date {
-    font-size: 28px;
+    font-size: 1.6em;
     padding: 20px 100px;
 }
 
@@ -23,13 +23,13 @@ body {
 
 .french-word,
 .english-word {
-    font-size: 120px;
+    font-size: 7.5em;
     margin: 0;
     font-weight: 700;
 }
 
 .word-type {
-    font-size: 48px;
+    font-size: 3em;
     margin: 0;
     font-weight: 400;
     padding: 20px 0;
@@ -49,7 +49,7 @@ body {
 .french-sentence,
 .english-sentence {
     color: white;
-    font-size: 24px;
+    font-size: 1.5em;
     padding: 10px 0;
 }
 
@@ -79,4 +79,51 @@ body {
 
 #footer-name {
     font-weight: 700;
+}
+
+@media screen and (max-width: 900px) {
+    .date, .french-sentence, .english-sentence {
+        text-align: center;
+    }
+
+    .word-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .english-word {
+        align-self: center;
+    }
+
+    .date {
+        font-size: 1em;
+        padding: 20px 0px;
+    }
+
+    .french-word,
+    .english-word {
+        font-size: 4em;
+    }
+
+    .word-type {
+        font-size: 1.5em;
+        padding: 10px 0;
+    }
+
+    .sentences-container {
+        padding: 20px 0;
+        margin: 10px 0;
+    }
+
+    .word-container {
+        padding: 10px 0;
+        margin: 20px 0;
+    }
+
+    .french-sentence,
+    .english-sentence {
+        font-size: 1em;
+        padding: 10px 0;
+}
 }
