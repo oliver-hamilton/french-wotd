@@ -81,7 +81,7 @@ body {
     font-weight: 700;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1280px) {
     .date, .french-sentence, .english-sentence {
         text-align: center;
     }
