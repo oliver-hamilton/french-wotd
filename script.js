@@ -102,10 +102,11 @@ function createWordElements(words) {
 
 
 // Display the array of word elements passed
+// Prepend each new item to the container so that the newest word is shown first
 async function displayFirebaseWords(wordElements) {
     const wordContainer = document.getElementById("word-container");
     for (let wordElement of wordElements) {
-        wordContainer.appendChild(wordElement);
+        wordContainer.insertBefore(wordElement, wordContainer.firstChild);
     }
 }
 

@@ -1,0 +1,7 @@
+
+# HTID:14647888: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:14647888:
+RewriteEngine On 
+RewriteRule ^home/?$ index.html [NC,L]
+RewriteRule ^word-of-the-day/?$ word-of-the-day.html [NC,L]

@@ -1,0 +1,662 @@
+        @keyframes showElement {
+            from {opacity: 0;}              
+            to {opacity: 1;}
+        }
+
+        body {
+			padding: 0;
+			margin: 0;
+
+		}
+		
+		.defaultMenu {
+		    display: inline-block;
+		}
+		
+#headerDiv {
+    padding-top: 10px;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 0px;
+    display: block;
+    box-shadow: 0 5px 4px -4px grey;
+    z-index: 10;
+
+}
+
+h1, a {
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    /*border: 1px solid black;*/
+    display:block;
+}
+
+h1 {
+    display: inline-block;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    color: black;
+
+}
+        
+#logo {
+    display: inline-block;
+    margin: 0;
+    padding: 0px 20px 0px 20px;
+    vertical-align: middle;
+}
+
+.hamburger-button {
+    display: none;
+    position: fixed;
+    margin-top: 30px;
+    top: 0px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+.hamburger-button:hover {
+    cursor: pointer;
+}
+
+.defaultMenu {
+    position: fixed;
+    padding-top: 30px;
+    top: 0px;
+    right: 50px;   
+    border: none;
+}
+
+.menuLink {
+    display: inline;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0 20px;
+    color: black;
+    vertical-align: bottom;
+    /*Remove underline on text*/
+    text-decoration: none;
+}
+        
+.menuLink:hover {
+    color: #87cefa;
+}
+        
+/*If a menu item is selected, show it with a bolder font*/
+.menuSelected {
+    font-weight: 700;
+}
+
+		h1 {
+			display: inline-block;
+			font-weight: 900;
+			margin: 0;
+			padding: 0;
+
+		}
+
+		p {
+			font-size: 18px;
+
+		}
+
+		.frenchWord {
+			font-size: 96px;
+			padding: 0;
+			margin: 10px;
+
+		}
+
+		h3 {
+			font-weight: 900;
+			font-size: 16px;
+
+		}
+
+		.englishWord {
+            font-size: 72px;
+			font-weight: 500;
+
+		}
+        
+        .moreWordsButtons {
+            display: block;
+            margin: 10px auto;
+            padding: 15px 30px;
+            background-color: #da0404;
+            color: white;
+            border: none;
+            box-shadow: 1px 1px 5px -1px grey;
+            font-weight: 700;
+            font-size: 16px;
+            border-radius: 30px;
+            /*Shows the button can be clicked*/
+            cursor: pointer;
+        }
+
+        .moreWordsButtons:hover {
+            background-color: #ab0505;
+        }
+
+		.wordDiv {
+			display: inline-block;
+			width: 100%;
+            margin-bottom: 80px;
+		}
+
+		.wordDetails {
+			display: block;
+			background-color: #87cefa;
+			padding: 20px 0;
+			text-align: center;
+            box-shadow: 2px 2px 4px grey;
+			
+		}
+
+		.exampleBlock {
+			width: 49%;
+			display: block;
+			margin: 0 auto;
+
+		}
+
+		.exampleSentences {
+			margin: 30px 0;
+			text-align: center;
+		}
+        
+        .isVisible {
+            /*Start an animation to show the element*/
+            animation-name: showElement;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+		
+		#banner2, #banner3 {
+		    padding: 0 50px;
+		}
+        
+        h2, h3, a, p {
+			font-family: 'Lato', sans-serif;
+			text-align: left;
+			display: block;
+		}
+
+		#header1 {
+            position: absolute;
+            font-weight: 700;
+			font-size: 108px;
+			padding: 0;
+            left: 50px;
+            top: 100px;
+            color: black;
+
+		}
+        
+        #header1-ext {
+            position: absolute;
+            font-weight: 700;
+            font-size: 72px;
+            color: darkgray;
+            left: 50px;
+            top: 300px;
+            
+        }
+        
+        #header2, #header3 {
+            font-size: 72px;
+            text-align: left;
+            padding: 30px 0;
+            
+        }
+		        
+        #description2, #description3 {
+            padding: 0;
+            font-size: 24px;
+            text-align: left;
+            color: dimgray;
+        }
+        
+        #banner1Image {
+            width: 100%;
+        }
+        
+
+        #banner3Image {
+            display: inline-block;
+            width: 40%;
+        }
+        
+        #wotdButton {
+            font-size: 28px;
+            position: absolute;
+            top: 700px;
+            left: 50px;
+            padding: 30px 60px;
+            background-color: transparent;
+            border-radius: 100px;
+            font-weight: 700;
+            color: black;
+            border: 4px solid black;
+            text-decoration: none;
+            transition: 0.5s;
+        }
+        
+        #wotdButton:hover {
+            /*Highlight button*/
+            border: 4px solid #da0404; 
+            background-color: #da0404; 
+            color: white;
+            
+        }
+        
+        #header2, #header3, #description2, #description3 {
+            color: black;
+        }
+        
+        span {
+            display: inline-block;
+        }
+        
+        #banner2Image {
+            width: 25%;
+            box-sizing: border-box;
+            margin: 0;
+            display: inline;
+            padding-top: 50px;
+            vertical-align: top;
+        }
+        
+        hr {
+            position: absolute;
+            top: 175px;
+            left: 50px;
+            border-top: 5px solid black;
+            width: 125px;
+        }
+    
+        
+        .banner-content {
+            padding: 0;
+            margin: 0;
+            width: 74%;
+            box-sizing: border-box;
+        }
+
+        #banner-content-3 {
+             width: 59%;
+        }
+        
+        .hideMenu {
+		    display: none;
+            border: none;
+		}
+		
+		.showMenu {
+		    display: inline-block;
+            border: none;
+		}
+
+        /*--------------------- Word of the Day page -----------------------*/
+        .dateText, .frenchWord, .wordAttributes, .wordGender, .englishWord, .frenchExample, .englishExample {
+            text-align: center;
+        }
+        
+        #wordsDiv {
+            margin-top: 90px;
+        }
+
+        
+        /*Responsive design*/
+        
+        @media only screen and (max-width: 1680px) {
+            
+            #wotdButton {
+                top: 600px;
+            }
+        }
+        
+        
+        @media only screen and (max-width: 1540px) {
+            
+            hr {
+                top: 125px;
+            }
+            #header1 {
+                font-size: 92px;
+                top: 75px;
+            }
+            
+            #header1-ext {
+                font-size: 78px;
+                top: 210px;
+            }
+            
+            #wotdButton {
+                top: 550px;
+            }
+            
+        }
+        
+        @media only screen and (max-width: 1260px) {
+                        
+            #menuContainer {
+                /*position: static;*/
+                /*Add padding now that the menu bar is below the title*/
+                padding: 30px 0;        
+            }
+            
+            #header1, #header1-ext, hr, #wotdButton {
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            #wotdButton {
+                top: 550px;
+                width: 250px;
+                height: auto;
+                font-size: 24px;
+            }
+            
+            #header1 {
+                margin-top: 15px;
+                top: 175px;
+            }
+            
+            #banner1Image {
+                display: inline;
+                width: 1200px;
+                
+            }
+            
+            #banner1Image-container {
+                overflow: hidden;
+            }
+            
+            #banner3Image {
+                display: block;
+                width: 80%;
+                margin: 0 auto;
+            }
+            
+            #header1-ext {
+                top: 325px;
+            }
+            
+            hr {
+                display: none;
+            }
+            
+            #banner1Image-container, .banner-content, #banner-content-3 {
+                width: 100%;
+            }
+            
+            #banner2Image {
+                width: 400px;
+            }
+            
+            #banner2, #header2, #description2, #header3, #description3 {
+                text-align: left;
+            }
+            
+        }
+
+        /*Once the screen becomes small enough, display content in a linear vertical fashion*/
+        @media only screen and (max-width: 960px) {
+            
+            .defaultMenu {
+                display: none;
+                position: static;
+            }
+            
+            .showMenu {
+                display: block;
+            }
+            
+            .menuLink {
+                font-size: 0.8em;
+                display: block;
+            }
+            
+            #hamburger-dark {
+                display: inline-block;
+            }
+            
+            #hamburger-light {
+                display: none;
+            }
+            
+            #banner1Image-container {
+                display: none;
+            }
+            
+            #header1 {
+                 position: static;
+                 display: block;
+                 margin: 20px 0;
+            }
+            
+            
+            #header1-ext {
+                position: static;
+                margin: 20px 0 60px 0;
+            }
+            
+            
+            #wotdButton {
+                position: static;
+                padding: 15px 20px;
+                border: 3px solid black;
+            }
+            
+            #banner1 {
+                display: block;
+                background-image: url("solid_1.png");
+                background-size: 250% 100%;
+                width: 100%;
+                margin: 80px 0 0 0;
+                padding: 0 0 25px 0;
+            }
+            
+            
+            /*#banner1Image {
+                width: 800px;
+                
+            }*/
+            
+            /*#menuContainer {
+                display: block;
+                position: static;
+                /*Add padding now that the menu bar is below the title*/
+                padding: 30px 0;
+                
+            }*/
+        }
+        
+        @media only screen and (max-width: 870px) {
+            
+            
+            #header1 {
+                font-size: 72px;
+                top: 175px;
+            }
+            
+            #header1-ext {
+                font-size: 48px;
+                top: 300px;
+                
+            }
+        }
+
+
+        @media only screen and (max-width: 680px) {
+            
+            #wordsDiv {
+                margin-top: 90px;
+            }
+            
+             #header1 {
+                top: 0px;
+            }
+            
+            #header1-ext {
+                top: 20px;
+            }
+            
+            #wotdButton {
+                top: 250px;
+            }
+            
+            #banner1Image {
+                width: 600px;
+                
+            }
+            
+            /*#menuContainer {
+            
+                display: none;
+            }*/
+            
+            
+            .frenchWord {
+                font-size: 64px;
+            }
+            
+            .englishWord {
+                font-size: 56px;
+            }
+            
+            #banner2, #banner3 {
+		        padding: 0 20px;
+		    }
+        }
+        
+        
+        @media only screen and (max-width: 640px) {
+            
+            
+            #logoImage {
+                width: 40px;
+            }
+            
+            h1 {
+                font-size: 1.2em;
+            }
+            
+            .hamburger-image {
+                width: 20px;
+            }
+            
+            .hamburger-button {
+                margin-top: 20px;
+            }
+            
+            #wordsDiv {
+                margin-top: 55px;
+            }
+            
+            #header1 {
+                font-size: 3em;
+                top: 175px;
+            }
+            
+            #header1-ext {
+                font-size: 32px;
+                top: 300px;
+            }
+            
+            #header2, #header3 {
+                font-size: 2.5em;
+                text-align: center;
+            }
+            
+            
+            #banner2Image {
+                width: 100%;
+            }
+            
+            #wotdButton {
+                font-size: 18px;
+                width: 170px;
+                margin: 0 auto;
+            }
+            
+            #description2, #description3 {
+                font-size: 1em;
+            }
+            
+            a {
+                font-size: 0.8em;
+            }
+        }
+        
+        /*Dark theme styles*/
+        @media (prefers-color-scheme: dark) {
+            
+            /*Once the screen becomes small enough, display content in a linear vertical fashion*/
+            @media only screen and (max-width: 960px) {
+            
+                #hamburger-light {
+                    display: inline-block;
+                }
+            
+                #hamburger-dark {
+                    display: none;
+                }
+            }
+            
+            h1, #header1, #header2, #header3, .menuLink {
+                color: white;
+            }
+            
+            #description2, #description3, #header1-ext {
+                color: rgba(200, 200, 200, 1);
+            }
+            
+            hr {
+                border-top: 5px solid white;
+            }
+            
+            body {
+                background-color: rgba(0, 0, 0, 0.85);
+            }
+            
+            .moreWordsButtons {
+                box-shadow: 1px 1px 5px -1px black;
+            }
+            
+            #headerDiv {
+                background-color: rgba(40, 40, 40, 1);
+                box-shadow: 0 5px 4px -4px black;
+            }
+        
+            
+            .exampleSentences, .frenchExample, .englishExample {
+                color: rgba(220, 220, 220, 1);
+            }
+            
+            #headerDiv {
+                background-color: rgba(40, 40, 40, 1);
+                box-shadow: 0 5px 4px -4px black;
+            }
+    
+            h1 {
+                color: white;
+            }
+            
+            body {
+                background-color: rgba(0, 0, 0, 0.85);
+            }
+            
+            .menuLink {
+                color: white;
+            }
+            
+}
+
+

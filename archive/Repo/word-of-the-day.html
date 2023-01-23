@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Word of the Day</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="header.css">
+	<link rel="stylesheet" href="style.css" typep="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js"></script>
+    
+    <script src="word-of-the-day.js"></script>
+</head>
+
+<body>
+
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+    <!--Cloud Firestore SDK-->
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>                                                                           
+    
+    <!--<script src="index.js" rel="stylesheet"></script>-->
+
+
+	<div id="headerDiv">
+	       <a id="logo" href="home"><img id="logoImage" src="logo.png" width=75></a>
+            <h1>French Word of the Day</h1>
+            <div id="menuContainer" class="defaultMenu">
+                <a class="menuLink menuSelected" href="home">HOME</a>
+                <a class="menuLink" href="word-of-the-day">WORD OF THE DAY</a>
+            </div>
+            <button class="hamburger-button" id="hamburger-dark" onclick="toggleMenu()"><img src="hamburger_icon_dark.png" class="hamburger-image" width="30px"></button>
+            <button class="hamburger-button" id="hamburger-light" onclick="toggleMenu()"><img src="hamburger_icon_light.png" class="hamburger-image" width="30px"></button>
+	    </div>
+    
+    <div id="wordsDiv">
+    
+    </div>
+
+	<!--<h2 id="welcomeGreeting">Good evening</h2>
+	<p id="dateText">Date</p>
+    <hr>-->
+
+	<!--Word of the day block-->
+<!--	<div class="wordDiv">
+		<div class="wordDetails">
+		  <h3 class="dateText">SAT 11 JULY</h3>
+		  <h2 class="frenchWord">French word</h2>
+		  <p class="wordAttributes">Word type</p>
+		  <p class="wordAttribtes">Word gender</p>
+		  <h2 class="englishWord">English word</h2>
+	   </div>
+	
+	   --><!--Example sentences block--><!--
+	   <div class="exampleBlock">
+		  <h3 class="exampleSentences">EXAMPLE SENTENCES</h3>
+		  <p class="frenchExample">French example sentences</p><br>
+		  <p class="englishExample">English example sentences</p>
+	   </div>
+	</div>-->
+	
+<!--<div id="previousWordDiv">                                                                                              
+	<button id="backButton"><img src="back-button.png" width="25px"></button>                                                      
+	<div id="previousWordDetails">                                                                                          
+		<h3 id="previousDate">08/07/2020</h3><br>                                                                               
+		<h2 id="previousWord">danser</h2>                                                                                       
+	</div>                                                                                                                  
+</div>
+
+
+<div id="nextWordDiv"> 
+	<button id="nextButton"><img src="next-button.png" width="25px"></button>      
+	<div id="nextWordDetails">      
+		<h3 id="nextDate">08/07/2020</h3><br>                        
+		<h2 id="nextWord">danser</h2>                    
+	</div>
+</div> -->
+    
+     <!--Import scrolling script-->
+    <script src="show_on_scroll.js"></script>
+
+  <script>
+		//Call the function to display the current word
+		const db = configureFirebase();
+      
+        //Get the current date
+        const today = getToday();
+        
+        //Set the current date text
+        //setText("dateText", today.toDateString());
+      
+        //Get and set both the previous and next days
+        //const yesterday = getYesterday();
+        //setText("previousDate", yesterday.toDateString());
+      
+        //const tomorrow = getTomorrow();
+        //setText("nextDate", tomorrow.toDateString());
+
+        //Get the document for today from Firestore DB and show it
+		//getWordDetails(db, today);
+      
+        //Track the start and end variables, which are incremented when the 'show more' button is clicked to show more words
+        let start = 0;
+        let end = 10;
+      
+        //Get 10 words
+        getWordsInRange(db, today, start, end);
+      
+        //Get the document for yesterday from Firestore and show it
+        //getPreviousWordDetails(db, yesterday);
+      
+        //Get the document for tomorrow and show it
+        //getNextWordDetails(db, tomorrow);
+    </script>
+    
+    <button class="moreWordsButtons">SHOW MORE</button>
+    
+    <script>
+      
+        async function showMoreWords() {
+            
+            //Hide all existing buttons
+            const buttons = document.getElementsByClassName("moreWordsButtons");
+            
+            for (let button of buttons) {
+                button.style.display = "none";
+            }
+            
+            //Increase the start and end variables by 10
+            start += 10;
+            end += 10;
+            
+            //Show the next 10 words
+            let nOfWords = await getWordsInRange(db, today, start, end);
+            
+            //If the request was not successful (all words have been displayed), quit so no more buttons are shown
+            console.log(nOfWords);
+            if ((nOfWords % 10) != 0) {
+                console.log("hello there");
+                return;
+            }
+            else {
+            
+            //Show another button with an event handler to show more buttons
+            const button = document.createElement("BUTTON");
+            button.classList.add("moreWordsButtons");
+            button.innerHTML = "SHOW MORE";
+            button.addEventListener("click", showMoreWords);
+            //Add to the document
+            document.body.appendChild(button);
+            }
+        }
+      
+      
+        document.getElementsByClassName("moreWordsButtons")[0].addEventListener("click", showMoreWords);
+      
+		</script>
+    
+	<!--TODO: Remove block for previous words-->
+	<!--<div id="previousWordsBlock">
+		<h3>PREVIOUS WORDS</h3>
+
+	<table id="previousWordsTable">
+	    <colgroup>
+	    	<col id="dateCol"/>
+	    	<col id="frenchCol"/>
+	    	<col id="englishCol"/>
+	    </colgroup>
+            <tr>
+		<th>Date</th>
+		<th>French word</th>
+		<th>English word</th>
+            </tr>
+	</table>
+	</div>
+
+            <script>
+	    <!--Call the function to display previous words-->
+	    <!--getPreviousWords(db);
+	    </script>-->
+
+
+</body>
+
+
+</html>

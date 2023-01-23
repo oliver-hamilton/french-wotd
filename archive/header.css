@@ -1,0 +1,90 @@
+#headerDiv {
+    padding-top: 10px;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 0px;
+    display: block;
+    box-shadow: 0 5px 4px -4px grey;
+    z-index: 10;
+
+}
+
+h1, a {
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    /*border: 1px solid black;*/
+    display:block;
+}
+
+h1 {
+    display: inline-block;
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+    color: black;
+
+}
+        
+#logo {
+    display: inline-block;
+    margin: 0;
+    padding: 0px 20px 0px 20px;
+    vertical-align: middle;
+}
+
+#menuContainer {
+    display: inline-block;
+    position: fixed;
+    padding-top: 30px;
+    top: 0px;
+    right: 50px;        
+}
+
+.menuLink {
+    display: inline;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 0 20px;
+    color: black;
+    vertical-align: bottom;
+    /*Remove underline on text*/
+    text-decoration: none;
+}
+        
+.menuLink:hover {
+    color: #87cefa;
+}
+        
+/*If a menu item is selected, show it with a bolder font*/
+.menuSelected {
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 1260px) {
+    #menuContainer {
+        display: block;
+        position: static;
+        /*Add padding now that the menu bar is below the title*/
+        padding: 30px 0;        
+    }
+}
+/*Dark theme styles*/
+@media (prefers-color-scheme: dark) {
+    #headerDiv {
+        background-color: rgba(40, 40, 40, 1);
+        box-shadow: 0 5px 4px -4px black;
+    }
+    h1 {
+        color: white;
+    }
+            
+    body {
+        background-color: rgba(0, 0, 0, 0.85);
+    }
+            
+    .menuLink {
+        color: white;
+            
+    }
+}
